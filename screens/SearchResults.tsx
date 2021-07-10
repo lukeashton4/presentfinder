@@ -36,6 +36,7 @@ export default function SearchResultsScreen({route, navigation}) {
         title="Pin this search"
         onPress={() => navigation.navigate('Home', {
           pinned: items,
+          recipient: recipient,
           user: user,
           accessToken: accessToken
         })}  

@@ -18,6 +18,8 @@ const Stack = createStackNavigator();
 export default function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
+
+  console.disableYellowBox = true;
     
   if (!isLoadingComplete) {
     return null;

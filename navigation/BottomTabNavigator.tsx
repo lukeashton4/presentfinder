@@ -118,6 +118,10 @@ function TabTwoNavigator({route}) {
       <TabTwoStack.Screen name="Settings" component={SettingsScreen}/>
       <TabTwoStack.Screen name="SearchResults" component={SearchResultsScreen} options={{ headerTitle: 'Search Results' }}/>
       <TabTwoStack.Screen name="ItemDetails" component={ItemDetailsScreen} options={{ headerTitle: 'Item Details' }}/>
+      <TabTwoStack.Screen
+        name="Home"
+        component={TabOneScreen}
+      />
     </TabTwoStack.Navigator>
   );
 }
