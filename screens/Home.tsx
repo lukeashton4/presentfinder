@@ -32,7 +32,9 @@ export default function TabOneScreen({navigation, route}) {
     <View style={styles.container}>
       <Text>Welcome {user.name}!</Text>
       {pinned != null ?
-      <TouchableOpacity style={styles.pinnedContainer}>
+      <TouchableOpacity style={styles.pinnedContainer} onPress={() => navigation.navigate('SearchResults', {
+        items: pinned
+      })}>
         <Text>Your pinned search for "{recipient}":</Text>
         <View style={styles.resultsContainer}>
             {pinned.map(item => 
