@@ -90,7 +90,7 @@ const PickerHandler = ({label, value, onChange, itemList}) => {
     <View style={styles.rowContainer}>
       <Text style={styles.text}>{label}</Text>
       <Picker
-        defaultValue={value}
+        defaultValue={'any'}
         selectedValue={value}
         style={styles.textInput}
         onValueChange={(itemValue, itemIndex) => onChange(itemValue)}
@@ -129,16 +129,21 @@ const genders = {
   genders: [
     {
       key: 1,
+      name: 'Please Select',
+      value: 'any'
+    },
+    {
+      key: 2,
       name: 'Male',
       value: 'male'
     },
     {
-      key: 2,
+      key: 3,
       name: 'Female',
       value: 'female'
     },
     {
-      key: 3,
+      key: 4,
       name: 'Other',
       value: 'any'
     }

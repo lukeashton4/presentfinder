@@ -42,24 +42,25 @@ export default function SearchResultsScreen({route, navigation}) {
       />
     </View>
         <View style={styles.resultsContainer}>
-          {items.map(item => 
-            items.length > 0 ?
+          {items.length > 0 ?
+            items.map(item => 
               <TouchableOpacity key={item.key} style={styles.cardContainer} onPress={() => navigation.navigate('ItemDetails', {
-                  item: item,
-                  user: user,
-                  accessToken: accessToken
-                })}>
-                    <Text style={styles.text}>{item.name}</Text>
-                    <View style={styles.imageContainer}>
-                        <Image
-                            style={styles.image}
-                            source={item.image}
-                        />
-                    </View>
-                </TouchableOpacity>
-            :
-            <Text>No matching results</Text>
-          )}
+                item: item,
+                user: user,
+                accessToken: accessToken
+              })}>
+                  <Text style={styles.text}>{item.name}</Text>
+                  <View style={styles.imageContainer}>
+                      <Image
+                          style={styles.image}
+                          source={item.image}
+                      />
+                  </View>
+              </TouchableOpacity>
+              )
+          :
+          <Text>Your search returned no results. Please try again with different criteria</Text>
+          }
         </View>
     </View>
   );
